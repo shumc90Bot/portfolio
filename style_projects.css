@@ -1,0 +1,139 @@
+/* Place in your CSS file at the top of the document */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background: url("/asset/background.png");
+  }
+  /* The side navigation menu */
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 3%;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: #363636;
+    padding: 12px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 3%;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      justify-content: center;
+    }
+    .sidebar a {float:left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+/* decorate the header */
+  div.row h2 {
+    font-family: 'vina sans';
+    font-size: 68px;
+  }
+
+/* left side of the main page */
+  #left-side {
+    margin-left: 5%;
+}
+
+  #left-side a {
+    text-decoration: none;
+    display:block;
+    margin-top: 5%;
+    font-family: monospace;
+    font-weight: 500;
+  }
+
+  #left-side a:hover {
+    color: #ffffff;    
+  }
+
+  #right-side {
+    text-align: right;
+  }
+
+  .row{
+    display: flex;
+  }
+ 
+  /* animated description */
+  .animate-charcter {
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: 600;
+    background-image: linear-gradient(
+    -225deg,
+    #000000 0%,
+    #161717 29%,
+    #a0a1a1 67%,
+    #727373 100%
+  );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s linear infinite;
+    display: inline-block;
+    font-size: 15px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.projectsListTitle {
+  font-family: 'vina sans';
+  font-size: 50px;
+  margin-right: 3%;
+}
+
+.projectsList {
+  margin-top: 5%;
+  overflow:auto;
+}
+
+.link {
+    text-decoration: none;
+    margin: 5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+}
+
+.list a:hover {
+  color: #ffffff;
+}
